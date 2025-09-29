@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Títulos de Crédito - Material de Estudo</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header fixo -->
+    <header class="header">
+        <div class="header-content">
+            <h1><i class="fas fa-file-invoice-dollar"></i> TÍTULOS DE CRÉDITO - Material de Estudo</h1>
+            <div class="header-controls">
+                <button id="search-btn" class="btn btn--outline btn--sm">
+                    <i class="fas fa-search"></i> Buscar
+                </button>
+                <button id="theme-toggle" class="btn btn--outline btn--sm">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
+        <div class="progress-container">
+            <div class="progress-bar">
+                <div class="progress-fill" id="progress-fill"></div>
+            </div>
+            <span class="progress-text" id="progress-text">0% concluído</span>
+        </div>
+    </header>
+
+    <!-- Busca -->
+    <div class="search-overlay hidden" id="search-overlay">
+        <div class="search-modal">
+            <div class="search-header">
+                <input type="text" id="search-input" placeholder="Buscar no material..." class="form-control">
+                <button id="close-search" class="btn btn--outline btn--sm">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="search-results" id="search-results"></div>
+        </div>
+    </div>
+
+    <div class="app-container">
+        <!-- Sidebar -->
+        <nav class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <h3>Navegação</h3>
+                <button class="sidebar-toggle" id="sidebar-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#conceito" class="nav-link active" data-section="conceito">
+                        <i class="fas fa-book"></i> Conceito e Legislação
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#caracteristicas" class="nav-link" data-section="caracteristicas">
+                        <i class="fas fa-list-check"></i> Características Cambiais
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#principios" class="nav-link" data-section="principios">
+                        <i class="fas fa-star"></i> Princípios CALIA
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#classificacao" class="nav-link" data-section="classificacao">
+                        <i class="fas fa-tags"></i> Classificação
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#especies" class="nav-link" data-section="especies">
+                        <i class="fas fa-file-alt"></i> Espécies Principais
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#operacoes" class="nav-link" data-section="operacoes">
+                        <i class="fas fa-exchange-alt"></i> Operações Cambiais
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#quiz" class="nav-link" data-section="quiz">
+                        <i class="fas fa-question-circle"></i> Quiz Interativo
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#resumo" class="nav-link" data-section="resumo">
+                        <i class="fas fa-clipboard-check"></i> Resumo Final
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Conteúdo principal -->
+        <main class="main-content" id="main-content">
+            
+            <!-- Seção: Conceito e Legislação -->
+            <section id="conceito" class="content-section active">
+                <div class="section-header">
+                    <h2><i class="fas fa-book"></i> Conceito e Legislação</h2>
+                    <button class="btn btn--outline btn--sm complete-btn" data-section="conceito">
+                        <i class="fas fa-check"></i> Marcar como Concluído
+                    </button>
+                </div>
+
+                <div class="card definition-card">
+                    <div class="card__body">
+                        <h3><i class="fas fa-balance-scale"></i> Definição Legal</h3>
+                        <blockquote class="legal-definition">
+                            "Título de crédito é o documento necessário ao exercício do direito literal e autônomo nele contido"
+                            <cite>Art. 887, Código Civil</cite>
+                        </blockquote>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card__body">
+                        <h3><i class="fas fa-gavel"></i> Legislação Específica</h3>
+                        <div class="legislation-grid">
+                            <div class="legislation-item">
+                                <h4>Letra de Câmbio e Nota Promissória</h4>
+                                <p><strong>Lei:</strong> Decreto 57.663/66</p>
+                                <p><strong>Base:</strong> Lei Uniforme de Genebra</p>
+                            </div>
+                            <div class="legislation-item">
+                                <h4>Duplicata</h4>
+                                <p><strong>Lei:</strong> Lei 5.474/68</p>
+                                <p><strong>Característica:</strong> Título causal</p>
+                            </div>
+                            <div class="legislation-item">
+                                <h4>Cheque</h4>
+                                <p><strong>Lei:</strong> Lei 7.357/85</p>
+                                <p><strong>Característica:</strong> Ordem de pagamento à vista</p>
+                            </div>
+                            <div class="legislation-item">
+                                <h4>Código Civil</h4>
+                                <p><strong>Aplicação:</strong> Subsidiária</p>
+                                <p><strong>Artigos:</strong> 887-926</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Seção: Características Cambiais -->
+            <section id="caracteristicas" class="content-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-list-check"></i> Características Cambiais</h2>
+                    <button class="btn btn--outline btn--sm complete-btn" data-section="caracteristicas">
+                        <i class="fas fa-check"></i> Marcar como Concluído
+                    </button>
+                </div>
+
+                <div class="characteristics-grid">
+                    <div class="card characteristic-card">
+                        <div class="card__body">
+                            <div class="characteristic-icon">
+                                <i class="fas fa-exchange-alt"></i>
+                            </div>
+                            <h3>Negociabilidade</h3>
+                            <p>Facilidade de circulação e transferência do crédito</p>
+                        </div>
+                    </div>
+                    <div class="card characteristic-card">
+                        <div class="card__body">
+                            <div class="characteristic-icon">
+                                <i class="fas fa-gavel"></i>
+                            </div>
+                            <h3>Executividade</h3>
+                            <p>São títulos executivos extrajudiciais, permitem cobrança judicial rápida</p>
+                        </div>
+                    </div>
+                    <div class="card characteristic-card">
+                        <div class="card__body">
+                            <div class="characteristic-icon">
+                                <i class="fas fa-file-contract"></i>
+                            </div>
+                            <h3>Formalidade</h3>
+                            <p>Devem obedecer requisitos legais específicos para serem válidos</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Seção: Princípios CALIA -->
+            <section id="principios" class="content-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-star"></i> Princípios Fundamentais</h2>
+                    <button class="btn btn--outline btn--sm complete-btn" data-section="principios">
+                        <i class="fas fa-check"></i> Marcar como Concluído
+                    </button>
+                </div>
+
+                <div class="calia-container">
+                    <div class="calia-header">
+                        <h3>Mnemônico CALIA</h3>
+                        <div class="calia-letters">
+                            <span class="calia-letter" style="color: #2196F3;">C</span>
+                            <span class="calia-letter" style="color: #4CAF50;">A</span>
+                            <span class="calia-letter" style="color: #FF9800;">L</span>
+                            <span class="calia-letter" style="color: #9C27B0;">I</span>
+                            <span class="calia-letter" style="color: #F44336;">A</span>
+                        </div>
+                    </div>
+
+                    <div class="calia-grid">
+                        <div class="card calia-card" data-color="#2196F3">
+                            <div class="card__body">
+                                <div class="calia-card-header">
+                                    <span class="calia-letter-big">C</span>
+                                    <h4>Cartularidade</h4>
+                                </div>
+                                <p>O direito está vinculado ao documento (cártula). A posse do título é necessária para exercer o direito</p>
+                            </div>
+                        </div>
+                        
+                        <div class="card calia-card" data-color="#4CAF50">
+                            <div class="card__body">
+                                <div class="calia-card-header">
+                                    <span class="calia-letter-big">A</span>
+                                    <h4>Autonomia</h4>
+                                </div>
+                                <p>Cada relação cambial é independente. Vícios numa relação não contaminam as outras</p>
+                                <div class="subprinciples">
+                                    <small><strong>Subprincípios:</strong> Inoponibilidade e Abstração</small>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="card calia-card" data-color="#FF9800">
+                            <div class="card__body">
+                                <div class="calia-card-header">
+                                    <span class="calia-letter-big">L</span>
+                                    <h4>Literalidade</h4>
+                                </div>
+                                <p>Só vale o que está escrito no título. Não valem acordos verbais ou documentos externos</p>
+                            </div>
+                        </div>
+                        
+                        <div class="card calia-card" data-color="#9C27B0">
+                            <div class="card__body">
+                                <div class="calia-card-header">
+                                    <span class="calia-letter-big">I</span>
+                                    <h4>Inoponibilidade</h4>
+                                </div>
+                                <p>Subprincípio da Autonomia. Não se pode opor exceções pessoais a terceiros de boa-fé</p>
+                            </div>
+                        </div>
+                        
+                        <div class="card calia-card" data-color="#F44336">
+                            <div class="card__body">
+                                <div class="calia-card-header">
+                                    <span class="calia-letter-big">A</span>
+                                    <h4>Abstração</h4>
+                                </div>
+                                <p>Subprincípio da Autonomia. O título se desvincula da causa que lhe deu origem</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Seção: Classificação -->
+            <section id="classificacao" class="content-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-tags"></i> Classificação dos Títulos</h2>
+                    <button class="btn btn--outline btn--sm complete-btn" data-section="classificacao">
+                        <i class="fas fa-check"></i> Marcar como Concluído
+                    </button>
+                </div>
+
+                <div class="classification-container">
+                    <div class="card collapsible-card">
+                        <div class="card__header card-toggle" data-target="modelo">
+                            <h3><i class="fas fa-shapes"></i> Quanto ao Modelo</h3>
+                            <i class="fas fa-chevron-down toggle-icon"></i>
+                        </div>
+                        <div class="card__body collapsible-content" id="modelo">
+                            <div class="classification-item">
+                                <h4>Vinculado</h4>
+                                <p>Forma definida em lei (cheque, duplicata)</p>
+                            </div>
+                            <div class="classification-item">
+                                <h4>Livre</h4>
+                                <p>Forma livre desde que com requisitos (letra de câmbio, nota promissória)</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card collapsible-card">
+                        <div class="card__header card-toggle" data-target="causa">
+                            <h3><i class="fas fa-link"></i> Quanto à Causa</h3>
+                            <i class="fas fa-chevron-down toggle-icon"></i>
+                        </div>
+                        <div class="card__body collapsible-content" id="causa">
+                            <div class="classification-item">
+                                <h4>Causal</h4>
+                                <p>Exige causa jurídica (duplicata)</p>
+                            </div>
+                            <div class="classification-item">
+                                <h4>Abstrato</h4>
+                                <p>Não exige causa (cheque, nota promissória)</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card collapsible-card">
+                        <div class="card__header card-toggle" data-target="estrutura">
+                            <h3><i class="fas fa-sitemap"></i> Quanto à Estrutura</h3>
+                            <i class="fas fa-chevron-down toggle-icon"></i>
+                        </div>
+                        <div class="card__body collapsible-content" id="estrutura">
+                            <div class="classification-item">
+                                <h4>Ordem de pagamento</h4>
+                                <p>3 sujeitos: sacador, sacado, beneficiário</p>
+                            </div>
+                            <div class="classification-item">
+                                <h4>Promessa de pagamento</h4>
+                                <p>2 sujeitos: emitente, tomador</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card collapsible-card">
+                        <div class="card__header card-toggle" data-target="circulacao">
+                            <h3><i class="fas fa-sync"></i> Quanto à Circulação</h3>
+                            <i class="fas fa-chevron-down toggle-icon"></i>
+                        </div>
+                        <div class="card__body collapsible-content" id="circulacao">
+                            <div class="classification-item">
+                                <h4>Ao portador</h4>
+                                <p>Transfere por tradição</p>
+                            </div>
+                            <div class="classification-item">
+                                <h4>Nominativo à ordem</h4>
+                                <p>Transfere por endosso</p>
+                            </div>
+                            <div class="classification-item">
+                                <h4>Nominativo não à ordem</h4>
+                                <p>Transfere por cessão civil</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card collapsible-card">
+                        <div class="card__header card-toggle" data-target="prazo">
+                            <h3><i class="fas fa-clock"></i> Quanto ao Prazo</h3>
+                            <i class="fas fa-chevron-down toggle-icon"></i>
+                        </div>
+                        <div class="card__body collapsible-content" id="prazo">
+                            <div class="classification-item">
+                                <h4>À vista</h4>
+                                <p>Pagamento imediato</p>
+                            </div>
+                            <div class="classification-item">
+                                <h4>A prazo</h4>
+                                <p>Pagamento futuro</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Seção: Espécies Principais -->
+            <section id="especies" class="content-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-file-alt"></i> Espécies Principais</h2>
+                    <button class="btn btn--outline btn--sm complete-btn" data-section="especies">
+                        <i class="fas fa-check"></i> Marcar como Concluído
+                    </button>
+                </div>
+
+                <div class="especies-grid">
+                    <div class="card especie-card">
+                        <div class="card__body">
+                            <h3><i class="fas fa-file-invoice"></i> Letra de Câmbio</h3>
+                            <div class="especie-details">
+                                <p><strong>Tipo:</strong> Ordem de pagamento</p>
+                                <p><strong>Sujeitos:</strong> 3</p>
+                                <p><strong>Aceite:</strong> Admite</p>
+                                <p><strong>Lei:</strong> Decreto 57.663/66</p>
+                            </div>
+                            <div class="caracteristicas-list">
+                                <span class="caracteristica-tag">Três sujeitos</span>
+                                <span class="caracteristica-tag">Pode ser sacada contra qualquer pessoa</span>
+                                <span class="caracteristica-tag">Aceite facultativo</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card especie-card">
+                        <div class="card__body">
+                            <h3><i class="fas fa-file-signature"></i> Nota Promissória</h3>
+                            <div class="especie-details">
+                                <p><strong>Tipo:</strong> Promessa de pagamento</p>
+                                <p><strong>Sujeitos:</strong> 2</p>
+                                <p><strong>Aceite:</strong> Não admite</p>
+                                <p><strong>Lei:</strong> Decreto 57.663/66</p>
+                            </div>
+                            <div class="caracteristicas-list">
+                                <span class="caracteristica-tag">Dois sujeitos</span>
+                                <span class="caracteristica-tag">Promessa direta</span>
+                                <span class="caracteristica-tag">Não há aceite</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card especie-card">
+                        <div class="card__body">
+                            <h3><i class="fas fa-money-check"></i> Cheque</h3>
+                            <div class="especie-details">
+                                <p><strong>Tipo:</strong> Ordem de pagamento</p>
+                                <p><strong>Sujeitos:</strong> 3</p>
+                                <p><strong>Aceite:</strong> Não admite</p>
+                                <p><strong>Lei:</strong> Lei 7.357/85</p>
+                            </div>
+                            <div class="caracteristicas-list">
+                                <span class="caracteristica-tag">À vista</span>
+                                <span class="caracteristica-tag">Sacado deve ser banco</span>
+                                <span class="caracteristica-tag">Não admite aceite</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card especie-card">
+                        <div class="card__body">
+                            <h3><i class="fas fa-receipt"></i> Duplicata</h3>
+                            <div class="especie-details">
+                                <p><strong>Tipo:</strong> Ordem de pagamento</p>
+                                <p><strong>Sujeitos:</strong> 3</p>
+                                <p><strong>Aceite:</strong> Obrigatório</p>
+                                <p><strong>Lei:</strong> Lei 5.474/68</p>
+                            </div>
+                            <div class="caracteristicas-list">
+                                <span class="caracteristica-tag">Título causal</span>
+                                <span class="caracteristica-tag">Aceite obrigatório</span>
+                                <span class="caracteristica-tag">Ligada a compra-venda ou serviços</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Seção: Operações Cambiais -->
+            <section id="operacoes" class="content-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-exchange-alt"></i> Operações Cambiais</h2>
+                    <button class="btn btn--outline btn--sm complete-btn" data-section="operacoes">
+                        <i class="fas fa-check"></i> Marcar como Concluído
+                    </button>
+                </div>
+
+                <div class="operacoes-container">
+                    <div class="card">
+                        <div class="card__body">
+                            <h3><i class="fas fa-check-circle"></i> Aceite</h3>
+                            <p><strong>Definição:</strong> Ato pelo qual o sacado concorda em pagar o título</p>
+                            <p><strong>Efeito:</strong> Torna o sacado devedor principal</p>
+                            <p><strong>Títulos:</strong> Letra de câmbio e duplicata</p>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card__body">
+                            <h3><i class="fas fa-handshake"></i> Endosso</h3>
+                            <p><strong>Definição:</strong> Meio de transferência do título de crédito</p>
+                            
+                            <h4>Tipos de Endosso:</h4>
+                            <div class="endosso-types">
+                                <div class="endosso-type">
+                                    <h5><i class="fas fa-circle"></i> Em branco</h5>
+                                    <p>Não identifica o novo beneficiário</p>
+                                </div>
+                                <div class="endosso-type">
+                                    <h5><i class="fas fa-user"></i> Em preto</h5>
+                                    <p>Identifica o novo beneficiário</p>
+                                </div>
+                                <div class="endosso-type endosso-improprio">
+                                    <h5><i class="fas fa-gavel"></i> Mandato</h5>
+                                    <p>Procuração para cobrança (impróprio)</p>
+                                </div>
+                                <div class="endosso-type endosso-improprio">
+                                    <h5><i class="fas fa-shield-alt"></i> Caução</h5>
+                                    <p>Transferência em garantia (impróprio)</p>
+                                </div>
+                            </div>
+
+                            <div class="endosso-rules">
+                                <h5>Regras do Endosso:</h5>
+                                <ul>
+                                    <li>Não pode ser parcial</li>
+                                    <li>Transfere a titularidade</li>
+                                    <li>Gera responsabilidade do endossante</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Seção: Quiz -->
+            <section id="quiz" class="content-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-question-circle"></i> Quiz Interativo</h2>
+                    <button class="btn btn--outline btn--sm complete-btn" data-section="quiz">
+                        <i class="fas fa-check"></i> Marcar como Concluído
+                    </button>
+                </div>
+
+                <div class="quiz-container">
+                    <div class="quiz-progress">
+                        <div class="quiz-progress-bar">
+                            <div class="quiz-progress-fill" id="quiz-progress"></div>
+                        </div>
+                        <span id="quiz-counter">Questão 1 de 5</span>
+                    </div>
+
+                    <div class="quiz-question" id="quiz-question">
+                        <h3 id="question-text"></h3>
+                        <div class="quiz-options" id="quiz-options">
+                        </div>
+                        <div class="quiz-feedback" id="quiz-feedback"></div>
+                        <div class="quiz-controls">
+                            <button id="quiz-next" class="btn btn--primary hidden">Próxima Questão</button>
+                            <button id="quiz-restart" class="btn btn--secondary hidden">Reiniciar Quiz</button>
+                        </div>
+                    </div>
+
+                    <div class="quiz-result hidden" id="quiz-result">
+                        <h3>Resultado Final</h3>
+                        <div class="quiz-score" id="quiz-score"></div>
+                        <button id="quiz-start-over" class="btn btn--primary">Refazer Quiz</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Seção: Resumo Final -->
+            <section id="resumo" class="content-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-clipboard-check"></i> Resumo Final</h2>
+                    <button class="btn btn--outline btn--sm complete-btn" data-section="resumo">
+                        <i class="fas fa-check"></i> Marcar como Concluído
+                    </button>
+                </div>
+
+                <div class="resumo-container">
+                    <div class="card">
+                        <div class="card__body">
+                            <h3><i class="fas fa-lightbulb"></i> Pontos-Chave</h3>
+                            <ul class="key-points">
+                                <li>Títulos de crédito são documentos necessários ao exercício do direito literal e autônomo (art. 887, CC)</li>
+                                <li>Mnemônico CALIA: <strong>C</strong>artularidade, <strong>A</strong>utonomia, <strong>L</strong>iteralidade, <strong>I</strong>noponibilidade, <strong>A</strong>bstração</li>
+                                <li>Características: Negociabilidade, Executividade, Formalidade</li>
+                                <li>Espécies principais: Letra de Câmbio, Nota Promissória, Cheque, Duplicata</li>
+                                <li>Operações: Aceite (letra e duplicata) e Endosso (transferência)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="completion-status">
+                        <h3>Status de Conclusão</h3>
+                        <div class="completion-items" id="completion-status">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- Botão voltar ao topo -->
+    <button class="back-to-top hidden" id="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Botões de navegação -->
+    <div class="navigation-buttons">
+        <button class="btn btn--outline" id="prev-section">
+            <i class="fas fa-chevron-left"></i> Anterior
+        </button>
+        <button class="btn btn--primary" id="next-section">
+            Próximo <i class="fas fa-chevron-right"></i>
+        </button>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2024 Material de Estudo - Títulos de Crédito. Desenvolvido para fins educacionais.</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
