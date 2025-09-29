@@ -1443,7 +1443,8 @@ select.form-control {
 
 /* Busca */
 .search-overlay {
-    position: fixed;
+   display: none !important; 
+  position: fixed;
     top: 0;
     left: 0;
     right: 0;
